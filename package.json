@@ -1,0 +1,58 @@
+{
+  "name": "bbc-editor",
+  "displayName": "BBC - editor",
+  "description": "Full Integration for the BBCode language with preview, highlight and syntax",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "bbcode.preview",
+        "title": "BBCode: Preview",
+        "icon": {
+          "light": "./assets/light/preview.svg",
+          "dark": "./assets/dark/preview.svg"
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "bbcode",
+        "aliases": [
+          "BBCode",
+          "bbcode"
+        ],
+        "extensions": [
+          ".bbc",
+          ".bbcode"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "bbcode",
+        "scopeName": "source.bbcode",
+        "path": "./syntaxes/bbcode.tmLanguage.json"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "bbcode.preview",
+          "when": "editorTextFocus",
+          "group": "navigation@1"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "bulletin-board-code": "^1.0.3"
+  }
+}

@@ -1,0 +1,67 @@
+{
+    "onEnterRules": [
+        {
+            "beforeText": "^\\s*\\[\\list\\].*$",
+            "action": {
+                "indent": "indent",
+                "appendText": "[*] ",
+            }
+        },
+        {
+            "beforeText": "^\\s*\\[\\*\\]\\s.*$",
+            "action": {
+                "indent": "none",
+                "appendText": "[*] "
+            }
+        }
+    ],
+    // symbols used as brackets
+    "brackets": [
+        ["[", "]"]
+    ],
+    // symbols that are auto closed when typing
+    "autoClosingPairs": [
+        { "open": "\"", "close": "\"" },
+        { "open": "[line", "close": "]" },
+        { "open": "[hr", "close": "]" },
+        { "open": "[br", "close": "]" },
+        { "open": "[b]", "close": "[/b]" },
+        { "open": "[i]", "close": "[/i]" },
+        { "open": "[u]", "close": "[/u]" },
+        { "open": "[s]", "close": "[/s]" },
+        { "open": "[h1]", "close": "[/h1]" },
+        { "open": "[h2]", "close": "[/h2]" },
+        { "open": "[h3]", "close": "[/h3]" },
+        { "open": "[h4]", "close": "[/h4]" },
+        { "open": "[h5]", "close": "[/h5]" },
+        { "open": "[h6]", "close": "[/h6]" },
+        { "open": "[sup]", "close": "[/sup]" },
+        { "open": "[sub]", "close": "[/sub]" },
+        { "open": "[code]", "close": "[/code]" },
+        { "open": "[center]", "close": "[/center]" },
+        { "open": "[align=", "close": "][/align]" },
+        { "open": "[list]", "close": "[/list]" },
+        { "open": "[nfo]", "close": "[/nfo]" },
+        { "open": "[pipes]", "close": "[/pipes]" },
+        { "open": "[table]", "close": "[/table]" },
+        { "open": "[row]", "close": "[/row]" },
+        { "open": "[cell]", "close": "[/cell]" },
+        { "open": "[img]", "close": "[/img]" },
+        { "open": "[img=", "close": "][/img]" },
+        { "open": "[email]", "close": "[/email]" },
+        { "open": "[email=", "close": "][/email]" },
+        { "open": "[url]", "close": "[/url]" },
+        { "open": "[url=", "close": "][/url]" },
+        { "open": "[quote]", "close": "[/quote]" },
+        { "open": "[quote=", "close": "][/quote]" },
+        { "open": "[size=", "close": "][/size]" },
+        { "open": "[color=", "close": "][/color]" },
+        { "open": "[blur=", "close": "][/blur]" },
+        { "open": "[rate", "close": "=\"\"]" },
+    ],
+    // symbols that can be used to surround a selection
+    "surroundingPairs": [
+        ["[", "]"],
+        ["\"", "\""]
+    ]
+}
